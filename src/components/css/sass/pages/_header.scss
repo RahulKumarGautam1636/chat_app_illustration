@@ -1,0 +1,85 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    // background: #ffffff4a;
+    // backdrop-filter: blur(2px);
+    z-index: 10;
+    // pointer-events: none;
+    // background-image: url('../../../public/images/pattern-bg.png');
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 3px 0px;
+
+    & nav {
+        padding: 1.3rem 0px 1rem;
+    }
+    
+    #topNav {
+        gap: 4rem;
+    }
+
+    .nav-link {
+        padding-bottom: 1rem;
+        color: var(--text-color-1);
+        font-size: 1.4rem;
+        font-weight: 700;
+        position: relative;
+
+        &.active {
+            color: var(--text-color-3) !important;
+            font-weight: 800;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background: var(--text-color-3);
+            left: 0;
+            right: 0;
+            bottom: -3rem;
+            height: 4px;
+            transform: scaleX(0);
+            transition: 0.5s;
+            transform-origin: left;
+
+        }
+
+        &.active::before {
+            transform: scaleX(1);
+        }
+
+    }
+
+    .header-btn {
+        position: relative;
+        font-size: 1.6rem;
+        padding: 0.5rem 2rem;
+        color: var(--text-color-3);
+        border-radius: 50px;
+        overflow: hidden;
+        font-weight: 700;
+
+        &:hover {
+            color: white;
+            background: var(--text-color-3);
+        }
+        
+        &::after {
+            @include lightBG(var(--text-color-3));
+        }
+    }
+
+    .login-btn {
+        color: var(--color-3);
+
+        &:hover {
+            color: white;
+            background: var(--color-3);
+        }
+
+        &::after {
+            @include lightBG(var(--color-3));
+        }
+    }
+
+}
