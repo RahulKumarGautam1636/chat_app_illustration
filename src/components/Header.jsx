@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <header>
             <nav className='container'>
-                <div className="d-flex flex-column flex-md-row justify-content-between align-items-center position-relative">
+                <div className="d-flex justify-content-between align-items-center position-relative">
                     
                     <h3 className="navbar-brand">
                         <img className='logo' src={`assets/img/versicle-logo.png`} alt="logo"/>

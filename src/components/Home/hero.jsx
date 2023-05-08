@@ -1,11 +1,11 @@
-const Home = () => {
+const Hero = () => {
     return (
-        <section id="home">
+        <section id="hero">
             <div className="container">
                 <div className="row">
                     <div className="col col-12 col-lg-3 left" data-aos="fade-right" data-aos-delay='500'>
                         <img src="assets/img/placement.svg" alt="placement" />
-                        <img className="img-fluid" src="assets/img/home-img-1.svg" alt="boy-image" />
+                        <img className="img-fluid" src="assets/img/home-img-1.svg" alt="student-one" />
                     </div>
                     <div className="col col-12 col-lg-6 middle">
                         <div data-aos="zoom-out" data-aos-delay='300'>
@@ -66,26 +66,23 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="seen-on" data-aos="fade-up" data-aos-delay='1200'>
+                        {/* <div className="seen-on" data-aos="fade-up" data-aos-delay='1200'>
                             <ul>
                                 <li>
-                                    <img className="img-fluid" src="assets/icons/aspnet.png" alt="logo-bbc" />
+                                    <img className="img-fluid" src="assets/icons/tallyPrime.jpg" alt="logo-forbes" />
                                 </li>
                                 <li>
                                     <img className="img-fluid" src="assets/icons/sql_icon.png" alt="logo-bi" />
                                 </li>
                                 <li>
-                                    <img className="img-fluid" src="assets/icons/tallyPrime.jpg" alt="logo-forbes" />
+                                    <img className="img-fluid" src="assets/icons/aspnet.png" alt="logo-bbc" />
                                 </li>
-                                {/* <li>
-                                    <img className="img-fluid" src="assets/img/icons/logo-techcrunch.png" alt="logo-techcrunch" />
-                                </li> */}
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="col col-12 col-lg-3 right" data-aos="fade-left" data-aos-delay='900'>
                         <img src="assets/img/graph.svg" alt="placement" />
-                        <img className="img-fluid" style={{transform: 'scale(1.2)'}} src="assets/img/home-img-2.svg" alt="boy-image" />
+                        <img className="img-fluid" style={{transform: 'scale(1.2)'}} src="assets/img/home-img-2.svg" alt="student-two" />
                     </div>
                 </div>
             </div>
@@ -93,4 +90,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Hero;
