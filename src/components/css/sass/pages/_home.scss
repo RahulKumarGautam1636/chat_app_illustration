@@ -40,17 +40,18 @@
             justify-content: center;
             gap: 2rem;
 
-            button {
+            & div button {
                 background: #b866ff;
                 color: white;
                 box-shadow: inset 0px 0px 11px 7px #8a4cc0, 0px 3px 3px 1px #c0c0c0ab;
 
-                &:last-child {
-                    background: #f3f3f3;
-                    color: #245663;
-                    box-shadow: 0px 3px 3px 0px #c0c0c0ab;
-                    padding: 0.9rem 3rem 0.9rem 1.2rem !important;
-                }
+            }
+
+            & div:last-child button {
+                background: #f3f3f3;
+                color: #245663;
+                box-shadow: 0px 3px 3px 0px #c0c0c0ab;
+                padding: 0.9rem 3rem 0.9rem 1.2rem !important;
             }
         }
 
@@ -66,11 +67,15 @@
                 padding: 4rem 0px 0;
 
                 img {
-                    max-height: 3rem;
+                    max-height: 7.5rem;
                     background: whitesmoke;
                 }
             }
 
+        }
+
+        svg {
+            stroke-width: 3px;
         }
 
     }

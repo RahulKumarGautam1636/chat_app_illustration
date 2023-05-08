@@ -1,3 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Nunito', sans-serif; }
+
+html {
+  font-size: 62.5%; }
+
+@keyframes strokeAndFill {
+  0% {
+    stroke-dashoffset: 450; }
+  50% {
+    stroke-dashoffset: 0; }
+  100% {
+    fill: var(--text-color-4);
+    stroke-dashoffset: 0; } }
+
+@keyframes strokeNotFill {
+  0% {
+    stroke-dashoffset: 450; }
+  50% {
+    stroke-dashoffset: 0; }
+  100% {
+    fill: white;
+    stroke-dashoffset: 0; } }
+
 /*
 0 - 600px:  Phone
 600 - 900px Tablets Landscape
@@ -93,15 +123,15 @@ header {
       display: flex;
       justify-content: center;
       gap: 2rem; }
-      #home .middle .btn-box button {
+      #home .middle .btn-box div button {
         background: #b866ff;
         color: white;
         box-shadow: inset 0px 0px 11px 7px #8a4cc0, 0px 3px 3px 1px #c0c0c0ab; }
-        #home .middle .btn-box button:last-child {
-          background: #f3f3f3;
-          color: #245663;
-          box-shadow: 0px 3px 3px 0px #c0c0c0ab;
-          padding: 0.9rem 3rem 0.9rem 1.2rem !important; }
+      #home .middle .btn-box div:last-child button {
+        background: #f3f3f3;
+        color: #245663;
+        box-shadow: 0px 3px 3px 0px #c0c0c0ab;
+        padding: 0.9rem 3rem 0.9rem 1.2rem !important; }
     #home .middle .seen-on {
       margin-top: 7rem;
       border-top: 4px solid #b866ff24; }
@@ -112,8 +142,10 @@ header {
         max-width: 100%;
         padding: 4rem 0px 0; }
         #home .middle .seen-on ul img {
-          max-height: 3rem;
+          max-height: 7.5rem;
           background: whitesmoke; }
+    #home .middle svg {
+      stroke-width: 3px; }
 
 .logo {
   max-height: 7rem; }
@@ -272,6 +304,22 @@ header {
     overflow: hidden;
     padding: 0; }
 
+.strokeAndFill {
+  animation: strokeAndFill 4s linear 1.8s 1 normal forwards;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450; }
+
+.strokeNotFill {
+  animation: strokeNotFill 4s linear 1.8s 1 normal forwards;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450; }
+
+@keyframes svgFill {
+  0% {
+    fill: white; }
+  100% {
+    fill: black; } }
+
 .heading-primary {
   font-size: clamp(40px, 7vw, 85px);
   color: var(--text-color-4);
@@ -306,9 +354,6 @@ body {
 
 html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 50em) {
-    html {
-      font-size: 45.5%; } }
 
 .sidePanel {
   height: 100%; }

@@ -203,3 +203,39 @@
         padding: 0;
     }
 }
+
+// svg {
+
+//     .strokeAndFill {
+//         transition: 2s linear;
+//         stroke-dasharray: 450;
+//         stroke-dashoffset: 450;
+//     }
+
+//     &.active .strokeAndFill {
+//         stroke-dashoffset: 0;
+//         // animation: svgFill 0.5s linear;
+//     } 
+// } 
+
+.strokeAndFill {
+    animation: strokeAndFill 4s linear 1.8s 1 normal forwards;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+}
+
+.strokeNotFill {
+    animation: strokeNotFill 4s linear 1.8s 1 normal forwards;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+}
+
+
+@keyframes svgFill {
+    0% {
+        fill: white;
+    }
+    100% {
+        fill: black;
+    }
+}

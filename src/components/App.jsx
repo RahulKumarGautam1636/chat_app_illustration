@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
+import AOS from 'aos';
 import './css/style.css';
+import "aos/dist/aos.css";
 // import { connect } from 'react-redux';
 
 import Home from './Home';
@@ -14,6 +17,15 @@ function App({ isLoading }) {
 // useScript('js/bootstrap.min.js');
 // useScript('js/main.js');                         // Header has some eventlisteners and initialization code for elements like mobile menu present in header/footer. 
 // useScript('js/custom.js');                    // importing main.js here to make sure DOM is correctly loaded before it's execution.
+
+useEffect(() => {
+  AOS.init({
+      // offset: 200,
+      duration: 600,
+      easing: 'ease-in-out',
+  });
+  AOS.refresh();
+}, []);
 
   return (
     <div>

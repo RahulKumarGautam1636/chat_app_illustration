@@ -1,0 +1,29 @@
+@keyframes strokeAndFill {
+    0% {
+        stroke-dashoffset: 450;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        fill: var(--text-color-4);
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes strokeNotFill {
+    0% {
+        stroke-dashoffset: 450;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        fill: white;
+        stroke-dashoffset: 0;
+    }
+}
