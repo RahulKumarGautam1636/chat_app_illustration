@@ -195,6 +195,50 @@ header {
   font-size: 2rem;
   width: auto; }
 
+#register {
+  background-color: aliceblue;
+  background-image: url(../../../public/assets/img/registerBG.svg);
+  background-repeat: no-repeat;
+  background-position-y: 5rem;
+  background-size: contain; }
+  #register .container > div {
+    width: 40%;
+    background: white;
+    padding: 3rem 2.8rem 3.3rem;
+    border-radius: 20px;
+    box-shadow: 1px 2px 10px 2px #d7678a52; }
+    @media only screen and (max-width: 991px) {
+      #register .container > div {
+        width: 100%; } }
+  #register .container h3 {
+    color: #fe79a2; }
+    #register .container h3 i {
+      transform: scale(2) translateX(-17%); }
+  #register .container .input__fields {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.3rem; }
+    #register .container .input__fields .input__group label {
+      font-family: "Josefin Sans", 'Nunito'; }
+    @media only screen and (max-width: 50em) {
+      #register .container .input__fields .input__group {
+        padding: 1rem 1rem 0 0; } }
+    #register .container .input__fields .input__group input {
+      width: 100%; }
+  #register .container .input__group input[type="text"],
+  #register .container .input__group input[type="email"],
+  #register .container #message {
+    width: 100%;
+    padding: 1.5rem 1rem 0.7rem 1.5rem;
+    border: none;
+    /* background: #f0f0f099; */
+    outline: none;
+    font-family: "Josefin Sans";
+    font-size: 1.6rem;
+    border-radius: 12px;
+    border: 1px solid #ff7ca547; }
+
 .logo {
   max-height: 7rem; }
 
@@ -284,6 +328,21 @@ header {
   animation: strokeNotFill 4s linear 1.8s 1 normal forwards;
   stroke-dasharray: 450;
   stroke-dashoffset: 450; }
+
+.registerSubmit {
+  width: 100%;
+  font-size: 1.9rem;
+  padding: 1.1rem 1.2rem 0.9rem 3rem;
+  margin-top: 0.6rem;
+  background: #ff7ca5;
+  color: white;
+  box-shadow: inset 0px 0px 11px 7px #e54778, -1px 2px 8px #ff7ca5; }
+  @media only screen and (max-width: 50em) {
+    .registerSubmit {
+      line-height: 2.3; } }
+  .registerSubmit svg {
+    float: right;
+    transform: scale(1.1); }
 
 .section-padding {
   padding: 12rem 0; }

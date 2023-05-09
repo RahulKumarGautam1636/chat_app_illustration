@@ -66,7 +66,7 @@ const Hero = () => {
                             </div>
                         </div>
 
-                        {/* <div className="seen-on" data-aos="fade-up" data-aos-delay='1200'>
+                        <div className="seen-on" data-aos="fade-up" data-aos-delay='1200'>
                             <ul>
                                 <li>
                                     <img className="img-fluid" src="assets/icons/tallyPrime.jpg" alt="logo-forbes" />
@@ -78,7 +78,7 @@ const Hero = () => {
                                     <img className="img-fluid" src="assets/icons/aspnet.png" alt="logo-bbc" />
                                 </li>
                             </ul>
-                        </div> */}
+                        </div>
                     </div>
                     <div className="col col-12 col-lg-3 right" data-aos="fade-left" data-aos-delay='900'>
                         <img src="assets/img/graph.svg" alt="placement" />

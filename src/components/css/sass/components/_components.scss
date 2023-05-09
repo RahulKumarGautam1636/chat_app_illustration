@@ -225,10 +225,26 @@
 }
 
 
-// .row {
-//     overflow-x: hidden;
-//     overflow-y: visible;
-// }
+.registerSubmit {
+    width: 100%;
+    font-size: 1.9rem;
+    padding: 1.1rem 1.2rem 0.9rem 3rem;
+    margin-top: 0.6rem;
+    background: #ff7ca5;
+    color: white;
+    // line-height: 2;
+    box-shadow: inset 0px 0px 11px 7px #e54778, -1px 2px 8px #ff7ca5;
+
+    @media only screen and (max-width: $bp-medium) {
+        line-height: 2.3;
+    }
+
+    & svg {
+        float: right;
+        transform: scale(1.1);
+    }
+
+}
 
 .section-padding {
     padding: 12rem 0;
