@@ -101,18 +101,18 @@
 
 .btn-1 {
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     letter-spacing: .1rem;
-    padding: 0.7rem 3rem;
+    padding: 1.2rem 4rem 1rem;
     border-radius: 0.5rem;
     transition: 0.5s;
-    color: #707070;
     /* background: linear-gradient(45deg, #5846f9 0%, #7b27d8 100%); */
     position: relative;
     overflow: hidden;
     z-index: 1;
     border: 0.2rem solid #cfcfcf;
-    background: white;
+    background: #245663;
+    color: white;
 
     &:hover {
         color: white;
@@ -236,7 +236,7 @@
     box-shadow: inset 0px 0px 11px 7px #e54778, -1px 2px 8px #ff7ca5;
 
     @media only screen and (max-width: $bp-medium) {
-        line-height: 2.3;
+        line-height: 2;
     }
 
     & svg {

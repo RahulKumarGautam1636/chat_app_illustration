@@ -16,6 +16,12 @@
     fill: white;
     stroke-dashoffset: 0; } }
 
+@keyframes up-down {
+  0% {
+    transform: translateY(10px); }
+  100% {
+    transform: translateY(-10px); } }
+
 /*
 0 - 600px:  Phone
 600 - 900px Tablets Landscape
@@ -108,10 +114,10 @@ header {
   #hero .middle {
     text-align: center;
     padding-top: 4rem; }
-    #hero .middle svg {
+    #hero .middle svg.heading {
       max-width: 100%; }
       @media only screen and (max-width: 991px) {
-        #hero .middle svg {
+        #hero .middle svg.heading {
           height: 5rem; } }
     #hero .middle p {
       font-family: 'Josefin sans';
@@ -146,14 +152,14 @@ header {
     #hero .middle svg {
       stroke-width: 3px; }
 
-#top-courses .heading-primary {
+#course-overview .heading-primary {
   font-size: 5rem; }
 
 @media only screen and (max-width: 991px) {
-  #top-courses .cards-container {
+  #course-overview .cards-container {
     justify-content: center; } }
 
-#top-courses .cards-container .course-card {
+#course-overview .cards-container .course-card {
   height: 20.5rem;
   max-width: 22rem;
   min-width: 21rem;
@@ -164,9 +170,12 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start; }
-  #top-courses .cards-container .course-card img {
+  @media only screen and (max-width: 420px) {
+    #course-overview .cards-container .course-card {
+      min-width: 47%; } }
+  #course-overview .cards-container .course-card img {
     max-height: 5rem; }
-  #top-courses .cards-container .course-card .heading-secondary {
+  #course-overview .cards-container .course-card .heading-secondary {
     padding-bottom: 1rem;
     border-bottom: 3px solid #ffffff61;
     font-size: 2.5rem;
@@ -174,10 +183,10 @@ header {
     font-family: 'Josefin Sans';
     width: 100%; }
     @media only screen and (max-width: 991px) {
-      #top-courses .cards-container .course-card .heading-secondary {
+      #course-overview .cards-container .course-card .heading-secondary {
         line-height: 3.5rem; } }
 
-#top-courses #browseAll i {
+#course-overview #browseAll i {
   font-size: 2.5rem;
   padding: 1.2rem;
   border-radius: 50%;
@@ -185,10 +194,10 @@ header {
   color: white;
   transform: rotate(180deg);
   cursor: pointer; }
-  #top-courses #browseAll i:hover {
+  #course-overview #browseAll i:hover {
     opacity: 0.7; }
 
-#top-courses #browseAll .heading-secondary {
+#course-overview #browseAll .heading-secondary {
   padding: 0;
   margin-bottom: 0;
   font-family: 'Nunito', sans-serif;
@@ -196,20 +205,26 @@ header {
   width: auto; }
 
 #register {
-  background-color: aliceblue;
+  background-color: white;
   background-image: url(../../../public/assets/img/registerBG.svg);
   background-repeat: no-repeat;
-  background-position-y: 5rem;
-  background-size: contain; }
+  background-position-y: 1rem;
+  background-size: contain;
+  padding: 17rem 0; }
   #register .container > div {
     width: 40%;
     background: white;
     padding: 3rem 2.8rem 3.3rem;
     border-radius: 20px;
     box-shadow: 1px 2px 10px 2px #d7678a52; }
+    #register .container > div:last-child {
+      width: 60%; }
     @media only screen and (max-width: 991px) {
       #register .container > div {
-        width: 100%; } }
+        width: 100%; }
+        #register .container > div:last-child {
+          height: 33rem;
+          width: 100%; } }
   #register .container h3 {
     color: #fe79a2; }
     #register .container h3 i {
@@ -238,6 +253,254 @@ header {
     font-size: 1.6rem;
     border-radius: 12px;
     border: 1px solid #ff7ca547; }
+
+#recomended-courses {
+  background-color: #edededd1; }
+  #recomended-courses .heading-primary {
+    font-size: 5rem; }
+  #recomended-courses .cards-container {
+    gap: 5rem; }
+  #recomended-courses .job-course-card {
+    max-width: 28rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: 0.3s; }
+    #recomended-courses .job-course-card:hover {
+      transform: translateY(-2rem); }
+    #recomended-courses .job-course-card .card-content {
+      padding: 2rem; }
+      #recomended-courses .job-course-card .card-content .heading-secondary {
+        font-family: 'Josefin Sans'; }
+      #recomended-courses .job-course-card .card-content p {
+        color: var(--text-color-4);
+        font-weight: 600; }
+    #recomended-courses .job-course-card .img-box {
+      height: 14rem;
+      background: aliceblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem; }
+      #recomended-courses .job-course-card .img-box img {
+        max-height: 85%; }
+    #recomended-courses .job-course-card .content-box {
+      padding-top: 2rem; }
+    #recomended-courses .job-course-card .button-primary {
+      width: 100%;
+      border-radius: 0;
+      padding: 1.1rem 0 0.8rem; }
+      @media only screen and (max-width: 991px) {
+        #recomended-courses .job-course-card .button-primary {
+          padding: 0.6rem 0 0.2rem;
+          line-height: 2; } }
+      #recomended-courses .job-course-card .button-primary svg {
+        float: right;
+        margin-top: 0.3rem; }
+
+.reviews {
+  grid-column: full-start / full-end;
+  background: #edededd1;
+  padding: 10rem 7rem 12rem; }
+  @media only screen and (max-width: 50em) {
+    .reviews {
+      padding: 9rem 5rem; } }
+  .reviews__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media only screen and (max-width: 50em) {
+      .reviews__heading {
+        flex-direction: column; } }
+    .reviews__heading .heading-primary {
+      font-size: 5rem;
+      font-family: 'Josefin Sans'; }
+      @media only screen and (max-width: 37.5em) {
+        .reviews__heading .heading-primary {
+          font-size: 3.5rem; } }
+      @media only screen and (max-width: 50em) {
+        .reviews__heading .heading-primary br {
+          display: none; } }
+    .reviews__heading button {
+      white-space: nowrap; }
+      @media only screen and (max-width: 50em) {
+        .reviews__heading button {
+          margin-top: 4rem;
+          width: 100%; } }
+  .reviews__slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 5rem; }
+    @media only screen and (max-width: 50em) {
+      .reviews__slider {
+        flex-direction: column; } }
+    .reviews__slider .review__card {
+      border-radius: 4px; }
+      .reviews__slider .review__card__feedback {
+        position: relative;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.7;
+        padding: 2.5rem;
+        background: white;
+        border-radius: 5px;
+        border: 1px solid #f1f0f0;
+        box-shadow: 0 3px 20px -2px rgba(20, 45, 100, 0.1); }
+        .reviews__slider .review__card__feedback::before {
+          content: '';
+          position: absolute;
+          bottom: -30px;
+          left: 20px;
+          height: 40px;
+          background: white;
+          width: 40px;
+          clip-path: polygon(100% 0, 0 0, 0 100%); }
+        .reviews__slider .review__card__feedback p {
+          font-family: 'Josefin Sans'; }
+      .reviews__slider .review__card__person {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        margin-top: 4.5rem; }
+        .reviews__slider .review__card__person img {
+          width: 7rem;
+          display: block; }
+        .reviews__slider .review__card__person .rating {
+          margin-left: auto;
+          padding-top: .5rem; }
+          .reviews__slider .review__card__person .rating i {
+            font-size: 1.45rem;
+            color: #efb300; }
+        .reviews__slider .review__card__person .occupation {
+          font-size: 1.5rem; }
+
+.contactUs {
+  grid-column: full-start / full-end;
+  padding: 10rem 7rem 10rem;
+  font-size: 1.6rem; }
+  @media only screen and (max-width: 50em) {
+    .contactUs {
+      padding: 1.5rem; } }
+  .contactUs .contact__page {
+    display: flex;
+    padding: 1rem;
+    background: #f0f0f0;
+    border-radius: 10px; }
+    @media only screen and (max-width: 50em) {
+      .contactUs .contact__page {
+        flex-direction: column; } }
+    .contactUs .contact__page__left {
+      background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%);
+      width: 40%;
+      padding: 5rem 4rem;
+      border-radius: 10px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      z-index: 0; }
+      @media only screen and (max-width: 50em) {
+        .contactUs .contact__page__left {
+          width: 100%; } }
+      .contactUs .contact__page__left h2 {
+        font-style: normal;
+        font-size: 4.5rem;
+        font-family: 'Nunito', 'Josefin Sans'; }
+      .contactUs .contact__page__left p {
+        font-size: 1.9rem;
+        line-height: 1.8;
+        color: #ffffffa6;
+        margin: 1.5rem 0 4rem;
+        font-family: "Josefin sans"; }
+      .contactUs .contact__page__left .address_list {
+        font-size: 1.75rem;
+        list-style: none; }
+        .contactUs .contact__page__left .address_list li {
+          display: flex;
+          align-items: flex-start;
+          margin-top: 2rem;
+          gap: 0.5rem;
+          font-family: 'Josefin Sans'; }
+        .contactUs .contact__page__left .address_list i {
+          font-size: 2rem;
+          margin-right: 0.6rem;
+          color: #ff9900;
+          margin-top: 2px; }
+      .contactUs .contact__page__left .icon_links {
+        font-size: 2.5rem;
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+        margin-top: 12rem;
+        cursor: pointer; }
+      .contactUs .contact__page__left::before, .contactUs .contact__page__left::after {
+        content: '';
+        position: absolute;
+        bottom: -33%;
+        right: -38%;
+        height: 42rem;
+        width: 42rem;
+        background: #ff8d9d;
+        border-radius: 50%;
+        box-shadow: inset 0px 0px 42px 0px rgba(0, 0, 0, 0.4);
+        z-index: -1;
+        animation: up-down 1.5s ease-in-out infinite alternate-reverse both;
+        animation-delay: 1s; }
+      .contactUs .contact__page__left::after {
+        background: #58ebfa;
+        height: 13rem;
+        width: 13rem;
+        bottom: 15%;
+        left: 56%;
+        animation: up-down 1.5s ease-in-out infinite alternate-reverse both; }
+    .contactUs .contact__page__right {
+      padding: 3rem;
+      width: 60%; }
+      @media only screen and (max-width: 50em) {
+        .contactUs .contact__page__right {
+          width: 100%;
+          padding: 3rem 1rem; } }
+      .contactUs .contact__page__right .input__fields {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1.5rem; }
+        .contactUs .contact__page__right .input__fields .input__group {
+          width: 50%;
+          padding: 1rem; }
+          @media only screen and (max-width: 50em) {
+            .contactUs .contact__page__right .input__fields .input__group {
+              padding: 1rem 1rem 0 0; } }
+          .contactUs .contact__page__right .input__fields .input__group input {
+            width: 100%; }
+      .contactUs .contact__page__right .extra__fields h4 {
+        margin: 3.5rem 0 1.5rem;
+        font-family: 'Nunito';
+        font-weight: 600; }
+      .contactUs .contact__page__right .text__area {
+        margin: 3rem 0 3.5rem; }
+      .contactUs .contact__page__right .input__group input[type="text"],
+      .contactUs .contact__page__right .input__group input[type="email"],
+      .contactUs .contact__page__right #message {
+        width: 100%;
+        padding: 1.8rem 1rem 1.2rem;
+        border: none;
+        border-bottom: 4px solid #e3e3e3;
+        background: #f0f0f0;
+        outline: none;
+        font-family: 'Nunito';
+        font-family: "Josefin Sans";
+        font-size: 1.6rem; }
+        @media only screen and (max-width: 50em) {
+          .contactUs .contact__page__right .input__group input[type="text"],
+          .contactUs .contact__page__right .input__group input[type="email"],
+          .contactUs .contact__page__right #message {
+            border-bottom: 2px solid #e3e3e3; } }
+      .contactUs .contact__page__right button {
+        display: block;
+        margin-left: auto; }
 
 .logo {
   max-height: 7rem; }
@@ -290,18 +553,18 @@ header {
 
 .btn-1 {
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   letter-spacing: .1rem;
-  padding: 0.7rem 3rem;
+  padding: 1.2rem 4rem 1rem;
   border-radius: 0.5rem;
   transition: 0.5s;
-  color: #707070;
   /* background: linear-gradient(45deg, #5846f9 0%, #7b27d8 100%); */
   position: relative;
   overflow: hidden;
   z-index: 1;
   border: 0.2rem solid #cfcfcf;
-  background: white; }
+  background: #245663;
+  color: white; }
   .btn-1:hover {
     color: white;
     border: .2rem solid transparent; }
@@ -339,7 +602,7 @@ header {
   box-shadow: inset 0px 0px 11px 7px #e54778, -1px 2px 8px #ff7ca5; }
   @media only screen and (max-width: 50em) {
     .registerSubmit {
-      line-height: 2.3; } }
+      line-height: 2; } }
   .registerSubmit svg {
     float: right;
     transform: scale(1.1); }
@@ -437,4 +700,4 @@ html {
   font-size: 62.5%; }
   @media only screen and (max-width: 50em) {
     html {
-      font-size: 45.5%; } }
+      font-size: 50.5%; } }

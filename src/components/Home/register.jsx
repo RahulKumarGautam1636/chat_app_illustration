@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Register = () => {
 
     return (
-        <section id="register" className="section-padding">
+        <section id="register">
             <div className="container d-flex flex-column flex-lg-row justify-content-center gap-5 px-4 px-lg-0">
                 {/* <h2 className="heading-primary">Browse Top Essential<br/> Career Courses</h2> */}
                 {/* <div className="cards-container pt-5 d-flex gap-5 flex-wrap">
@@ -47,7 +47,7 @@ const Register = () => {
                 </div>
 
                 <div className="order-1 order-lg-2">
-                    <div id="carouselIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div id="carouselIndicators" className="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="3000">
                         <div className="carousel-indicators">
                             <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" aria-label="Slide 1" className="active"></button>
                             <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -55,21 +55,21 @@ const Register = () => {
                             <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                             <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                         </div>
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img src="assets/img/courses/Banner-I.jpg" alt="First slide" className="d-block w-100"/>
+                        <div className="carousel-inner h-100">
+                            <div className="carousel-item h-100 active">
+                                <img src="assets/img/carousel/Banner-I.jpg" alt="First slide" className="d-block w-100 h-100"/>
                             </div>
-                            <div className="carousel-item">
-                                <img src="assets/img/courses/EthicalHacking-II.jpg" alt="Second slide" className="d-block w-100"/>
+                            <div className="carousel-item h-100">
+                                <img src="assets/img/carousel/EthicalHacking-II.jpg" alt="Second slide" className="d-block w-100 h-100"/>
                             </div>
-                            <div className="carousel-item">
-                                <img src="assets/img/courses/MockTest_1.jpg" alt="Third slide" className="d-block w-100"/>
+                            <div className="carousel-item h-100">
+                                <img src="assets/img/carousel/MockTest_1.jpg" alt="Third slide" className="d-block w-100 h-100"/>
                             </div>
-                            <div className="carousel-item">
-                                <img src="assets/img/courses/Tally_1.jpg" alt="Fourth slide" className="d-block w-100"/>
+                            <div className="carousel-item h-100">
+                                <img src="assets/img/carousel/Tally_1.jpg" alt="Fourth slide" className="d-block w-100 h-100"/>
                             </div>
-                            <div className="carousel-item">
-                                <img src="assets/img/courses/Tally_5.jpg" alt="Fourth slide" className="d-block w-100"/>
+                            <div className="carousel-item h-100">
+                                <img src="assets/img/carousel/Tally_5.jpg" alt="Fourth slide" className="d-block w-100 h-100"/>
                             </div>
                         </div>
                     </div>
