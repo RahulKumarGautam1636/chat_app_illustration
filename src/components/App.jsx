@@ -20,7 +20,7 @@ function App({ isLoading }) {
 
 useEffect(() => {
   AOS.init({
-      // offset: 200,
+      offset: 200,
       duration: 600,
       easing: 'ease-in-out',
   });

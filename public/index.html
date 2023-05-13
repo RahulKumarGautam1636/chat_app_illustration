@@ -13,10 +13,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>React App</title>
-    <link rel="stylesheet" href="assets/css/jsImageSlider/js-image-slider.css">
+    <!-- <link rel="stylesheet" href="assets/css/jsImageSlider/js-image-slider.css">
     <link href="assets/css/jsImageSlider/js-image-slider.css" rel="stylesheet" type="text/css" />
-    <script src="assets/css/jsImageSlider/js-image-slider.js" type="text/javascript"></script>
-    
+    <script src="assets/css/jsImageSlider/js-image-slider.js" type="text/javascript"></script> -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
   </head>
   <style>
     :root { 
@@ -86,5 +87,32 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root" style="overflow-x: hidden"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script>
+      $(function() {
+          $('.owl-carousel').owlCarousel({
+                autoplay: 1000,
+                loop: true,
+                dots: false,
+                stopOnHover: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1200: {
+                        items: 3
+                    }
+                },
+                smartSpeed: 5000,
+                // autoplayTimeout: 5000,
+                // autoplayHoverPause: true,
+                slideTransition: 'linear',
+            });
+      })
+    </script>
   </body>
 </html>

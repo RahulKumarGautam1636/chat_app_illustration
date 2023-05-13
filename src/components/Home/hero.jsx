@@ -66,7 +66,7 @@ const Hero = () => {
                             </div>
                         </div>
 
-                        <div className="seen-on" data-aos="fade-up" data-aos-delay='1200'>
+                        <div className="seen-on" data-aos="fade-up" data-aos-delay='1200' data-aos-offset='0'>
                             <ul>
                                 <li>
                                     <img className="img-fluid" src="assets/icons/tallyPrime.jpg" alt="logo-forbes" />

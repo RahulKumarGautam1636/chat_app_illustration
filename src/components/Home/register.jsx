@@ -1,6 +1,3 @@
-import CourseCard from "../utils/cards";
-import { Link } from 'react-router-dom';
-
 const Register = () => {
 
     return (
@@ -15,9 +12,9 @@ const Register = () => {
                         <h3 className="heading-secondary">Browse All</h3>
                     </div>
                 </div> */}
-                <div className="order-2 order-lg-1">
+                <div className="order-2 order-lg-1" data-aos="fade-right">
                     <form className="register-form h-100 w-100 d-flex flex-column align-items-center gap-4">
-                        <h3 className="heading-secondary d-flex w-100">REGISTER NOW <i className='bx bxs-notepad ms-auto'></i></h3> 
+                        <h3 className="heading-tertiary d-flex w-100">REGISTER NOW <i className='bx bxs-notepad ms-auto'></i></h3> 
                         <div className="input__fields">
                             <div className="input__group">
                                 <input type="text" placeholder="Your Full Name" id="fName"/>
@@ -46,7 +43,7 @@ const Register = () => {
                     </form>
                 </div>
 
-                <div className="order-1 order-lg-2">
+                <div className="order-1 order-lg-2" data-aos="fade-left">
                     <div id="carouselIndicators" className="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="3000">
                         <div className="carousel-indicators">
                             <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" aria-label="Slide 1" className="active"></button>

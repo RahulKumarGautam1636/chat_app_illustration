@@ -5,6 +5,7 @@ import CoursesOverview from "./coursesOverview";
 import Courses from "./courses";
 import Testimonials from "./testimonials";
 import Contact from "./contact";
+import Blogs from "./blogs";
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <Register/>
             <Testimonials/>
             <Contact/>
+            <Blogs/>
         </>
     )
 }

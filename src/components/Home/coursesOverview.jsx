@@ -14,7 +14,7 @@ const CoursesOverview = () => {
     return (
         <section id="course-overview" className="section-padding">
             <div className="container">
-                <h2 className="heading-primary">Browse Top Essential<br/> Career Courses</h2>
+                <h2 className="heading-secondary">Browse Top Essential<br/> Career Courses</h2>
                 <div className="cards-container pt-5 d-flex gap-4 gap-sm-5 flex-wrap">
                     {overviewItems.map((item, index) => <CourseCard course={item} key={index} index={index}/>)}
                     
