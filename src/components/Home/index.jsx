@@ -2,10 +2,10 @@ import Hero from "./hero";
 // import Courses from './courses';
 import Register from "./register";
 import CoursesOverview from "./coursesOverview";
-import Courses from "./courses";
+import Courses from "./recomendedCourses";
 import Testimonials from "./testimonials";
 import Contact from "./contact";
-import Blogs from "./blogs";
+import Blogs from "./blogs"; 
 
 const Home = () => {
     return (

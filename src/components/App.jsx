@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 
 import Home from './Home';
 import Header from './Header';
+import Courses from './courses';
 // import Footer from './footer';
 // import ScrollToTop from '../ScrollToTop.js';
 // import { ConnectedToast } from './utilities';
@@ -36,8 +37,8 @@ useEffect(() => {
         {/* <ScrollToTop/> */}
         <Routes>
           <Route path='/' exact element={<Home/>}/>
+          <Route path='/courses' element={<Courses/>}/>
           {/* <Route path='/productPage/:id' component={ProductPage}/>
-          <Route path='/franchisee' component={Franchisee}/>
           <Route path='/aboutUs' component={AboutUs}/>
           <Route path='/contactUs' component={ContactUs}/>
           <Route path='/filterPage/:filterTerm' component={FilterPage}/>

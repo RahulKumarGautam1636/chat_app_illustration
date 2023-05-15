@@ -1,5 +1,8 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
+// import Button from 'react-bootstrap/Button';
+// import Offcanvas from 'react-bootstrap/Offcanvas';
+import { HashLink } from 'react-router-hash-link';                 // using <Hashlink/> to scroll between page section which is not possible with simple <Link/> 
 
 const Header = () => {
 
@@ -15,22 +18,22 @@ const Header = () => {
 
                     <ul id="topNav" className="navbar-nav mt-4 mt-md-0 flex-md-row align-items-center d-none d-lg-flex">
                         <li className="nav-item">
-                            <Link className={`nav-link ${active === 'Home' && 'active'}`} onClick={() => setActive('Home')} to="#">Home</Link>
+                            <HashLink className={`nav-link ${active === 'Home' && 'active'}`} onClick={() => setActive('Home')} to="#hero">Home</HashLink>
                         </li>
                         <li className="nav-item mt-2 mt-md-0">
-                            <Link className={`nav-link ${active === 'Courses' && 'active'}`} onClick={() => setActive('Courses')} to="#">Courses</Link>
+                            <HashLink className={`nav-link ${active === 'Courses' && 'active'}`} onClick={() => setActive('Courses')} to="#recomended-courses">Courses</HashLink>
                         </li>
                         <li className="nav-item mt-2 mt-md-0">
-                            <Link className={`nav-link ${active === 'Blog' && 'active'}`} onClick={() => setActive('Blog')} to="#">Blog</Link>
+                            <HashLink className={`nav-link ${active === 'Blog' && 'active'}`} onClick={() => setActive('Blog')} to="#blogs">Blog</HashLink>
                         </li>
                         <li className="nav-item mt-2 mt-md-0">
-                            <Link className={`nav-link ${active === 'Contact' && 'active'}`} onClick={() => setActive('Contact')} to="#">Contact</Link>
+                            <HashLink className={`nav-link ${active === 'Contact' && 'active'}`} onClick={() => setActive('Contact')} to="#contact">Contact</HashLink>
                         </li>
                         <li className="nav-item mt-2 mt-md-0">
-                            <Link className={`nav-link ${active === 'MockTest' && 'active'}`} onClick={() => setActive('MockTest')} to="#">Mock Test</Link>
+                            <HashLink className={`nav-link ${active === 'Services' && 'active'}`} onClick={() => setActive('Services')} to="#course-overview">Services</HashLink>
                         </li>
                         <li className="nav-item mt-2 mt-md-0">
-                            <Link className={`nav-link ${active === 'Services' && 'active'}`} onClick={() => setActive('Services')} to="#">Services</Link>
+                            <HashLink className={`nav-link ${active === 'MockTest' && 'active'}`} onClick={() => setActive('MockTest')} to="#">Mock Test</HashLink>
                         </li>
                     </ul>
 
@@ -40,8 +43,36 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
+            {/* <MobileMenu/> */}
         </header>
     )
 }
 
 export default Header;
+
+
+// const MobileMenu = () => {
+//     const [show, setShow] = useState(false);
+
+//     const handleClose = () => setShow(false);
+//     const handleShow = () => setShow(true);
+
+//     return (
+//         <>
+//         <Button variant="primary" onClick={handleShow}>
+//             Launch
+//         </Button>
+
+//         <Offcanvas show={show} onHide={handleClose}>
+//             <Offcanvas.Header closeButton>
+//             <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+//             </Offcanvas.Header>
+//             <Offcanvas.Body>
+//             Some text as placeholder. In real life you can have the elements you
+//             have chosen. Like, text, images, lists, etc.
+//             </Offcanvas.Body>
+//         </Offcanvas>
+//         </>
+//     );
+// }
+

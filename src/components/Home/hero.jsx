@@ -46,7 +46,7 @@ const Hero = () => {
                             <p>Learn and interact with to industry experts to develop in-demand skills</p>
 
                             <div className="btn-box">
-                                <div data-aos="fade-left" data-aos-delay='1500'>
+                                <div data-aos="fade-left" data-aos-delay='1500' data-aos-offset='0'>
                                     <button className="button-primary">Enroll now 
                                         <svg className="ms-3" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="15.5" cy="15.5" r="15.5" fill="#FFB546"/>
@@ -54,7 +54,7 @@ const Hero = () => {
                                         </svg>
                                     </button>
                                 </div>
-                                <div data-aos="fade-right" data-aos-delay='1500'>
+                                <div data-aos="fade-right" data-aos-delay='1500' data-aos-offset='0'>
                                     <button className="button-primary">
                                         <svg className="me-3" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="15.5" cy="15.5" r="15.5" fill="#ff7ba6"/>
