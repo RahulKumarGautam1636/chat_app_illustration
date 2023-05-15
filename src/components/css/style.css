@@ -101,16 +101,22 @@ header {
   max-width: 100vw;
   z-index: 0;
   padding-top: 11rem; }
-  @media only screen and (max-width: 991px) {
-    #hero .left {
-      text-align: center; } }
   #hero .left img {
     max-height: 35rem; }
-  @media only screen and (max-width: 991px) {
+    @media only screen and (max-width: 37.5em) {
+      #hero .left img {
+        max-width: 50%; } }
+  @media only screen and (max-width: 37.5em) {
     #hero .right {
-      text-align: center; } }
+      margin-top: 6rem; } }
   #hero .right img {
     max-height: 35rem; }
+    @media only screen and (max-width: 37.5em) {
+      #hero .right img {
+        max-width: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    #hero .right img:first-child {
+      margin-left: -2.2rem; } }
   #hero .middle {
     text-align: center;
     padding-top: 4rem; }
@@ -119,15 +125,27 @@ header {
       @media only screen and (max-width: 991px) {
         #hero .middle svg.heading {
           height: 5rem; } }
+    #hero .middle #futureBetter {
+      margin: 4rem 0px; }
+      @media only screen and (max-width: 576px) {
+        #hero .middle #futureBetter {
+          margin: 3rem 0px; } }
     #hero .middle p {
       font-family: 'Josefin sans';
       margin-top: 2rem;
       font-size: 2rem; }
+      @media only screen and (max-width: 420px) {
+        #hero .middle p {
+          margin-top: 0rem; } }
     #hero .middle .btn-box {
       margin-top: 5rem;
       display: flex;
       justify-content: center;
       gap: 2rem; }
+      @media only screen and (max-width: 410px) {
+        #hero .middle .btn-box {
+          gap: unset;
+          justify-content: space-between; } }
       #hero .middle .btn-box div button {
         background: #b866ff;
         color: white;
@@ -149,6 +167,9 @@ header {
         #hero .middle .seen-on ul img {
           max-height: 7.5rem;
           background: whitesmoke; }
+          @media only screen and (max-width: 576px) {
+            #hero .middle .seen-on ul img {
+              max-height: 6rem; } }
     #hero .middle svg {
       stroke-width: 3px; }
 
@@ -309,14 +330,14 @@ header {
     @media only screen and (max-width: 50em) {
       .reviews__heading {
         flex-direction: column;
-        padding: 0 5rem; } }
-    .reviews__heading .heading-primary {
+        padding: 0 4rem; } }
+    .reviews__heading .heading-secondary {
       font-family: 'Josefin Sans'; }
       @media only screen and (max-width: 37.5em) {
-        .reviews__heading .heading-primary {
+        .reviews__heading .heading-secondary {
           font-size: 3.5rem; } }
       @media only screen and (max-width: 50em) {
-        .reviews__heading .heading-primary br {
+        .reviews__heading .heading-secondary br {
           display: none; } }
     .reviews__heading button {
       white-space: nowrap; }
@@ -664,6 +685,9 @@ header {
   color: var(--text-color-4);
   font-weight: 800;
   font-size: 5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 4.5rem; } }
 
 .text-1 {
   color: var(--text-color-2);

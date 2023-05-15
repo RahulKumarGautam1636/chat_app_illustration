@@ -7,24 +7,34 @@
 
     & .left {
 
-        @media only screen and (max-width: 991px) {
-            text-align: center;
-        }
-
         img {
             max-height: 35rem;
+
+            @media only screen and (max-width: $bp-small) {
+                max-width: 50%;
+            }
         }
     }
 
     & .right {
 
-        @media only screen and (max-width: 991px) {
-            text-align: center;
+        @media only screen and (max-width: $bp-small) {
+            margin-top: 6rem;
         }
 
         img {
 
             max-height: 35rem;
+
+            @media only screen and (max-width: $bp-small) {
+                max-width: 50%;
+            }
+        }
+
+        & img:first-child {
+            @media only screen and (max-width: $bp-small) {
+                margin-left: -2.2rem;
+            }
         }
     }
 
@@ -40,10 +50,22 @@
             }
         }
 
+        & #futureBetter {
+            margin: 4rem 0px;
+
+            @media only screen and (max-width: 576px) {
+                margin: 3rem 0px;
+            }            
+        }
+
         p {
             font-family: 'Josefin sans';
             margin-top: 2rem;
             font-size: 2rem;
+
+            @media only screen and (max-width: 420px) {
+                margin-top: 0rem;
+            }
         }
 
         .btn-box {
@@ -51,6 +73,11 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
+
+            @media only screen and (max-width: 410px) {
+                gap: unset;
+                justify-content: space-between;
+            }
 
             & div button {
                 background: #b866ff;
@@ -81,6 +108,10 @@
                 img {
                     max-height: 7.5rem;
                     background: whitesmoke;
+
+                    @media only screen and (max-width: 576px) {
+                        max-height: 6rem;
+                    }
                 }
             }
 
@@ -342,10 +373,10 @@
         
         @media only screen and (max-width: $bp-medium) {
             flex-direction: column;
-            padding: 0 5rem;
+            padding: 0 4rem;
         }
 
-        & .heading-primary {
+        & .heading-secondary {
             font-family: 'Josefin Sans';
 
             @media only screen and (max-width: $bp-small) {

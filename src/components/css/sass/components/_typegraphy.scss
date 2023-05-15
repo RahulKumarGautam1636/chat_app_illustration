@@ -10,6 +10,10 @@
     font-weight: 800;
     // font-size: 1.9rem;
     font-size: 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 4.5rem;
+    }    
 }
 
 .text-1 {
