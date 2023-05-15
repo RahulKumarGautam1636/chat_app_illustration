@@ -20,21 +20,12 @@
 
         @media only screen and (max-width: $bp-small) {
             margin-top: 6rem;
+            text-align: center;
         }
 
         img {
 
             max-height: 35rem;
-
-            @media only screen and (max-width: $bp-small) {
-                max-width: 50%;
-            }
-        }
-
-        & img:first-child {
-            @media only screen and (max-width: $bp-small) {
-                margin-left: -2.2rem;
-            }
         }
     }
 

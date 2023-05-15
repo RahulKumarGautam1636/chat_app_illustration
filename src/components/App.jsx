@@ -22,7 +22,7 @@ useEffect(() => {
   AOS.init({
       offset: 200,
       duration: 600,
-      easing: 'ease-in-out',
+      easing: 'ease-out',
   });
   AOS.refresh();
 }, []);

@@ -108,15 +108,10 @@ header {
         max-width: 50%; } }
   @media only screen and (max-width: 37.5em) {
     #hero .right {
-      margin-top: 6rem; } }
+      margin-top: 6rem;
+      text-align: center; } }
   #hero .right img {
     max-height: 35rem; }
-    @media only screen and (max-width: 37.5em) {
-      #hero .right img {
-        max-width: 50%; } }
-  @media only screen and (max-width: 37.5em) {
-    #hero .right img:first-child {
-      margin-left: -2.2rem; } }
   #hero .middle {
     text-align: center;
     padding-top: 4rem; }
