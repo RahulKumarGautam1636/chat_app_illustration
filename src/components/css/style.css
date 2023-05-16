@@ -562,6 +562,81 @@ header {
     color: white;
     background: #a667ea; }
 
+#courses {
+  font-size: 1.6rem; }
+  #courses .container > .row {
+    background: aliceblue;
+    padding: 1.5em;
+    min-height: 70vh;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; }
+  #courses .nav-pills {
+    gap: 1em; }
+    #courses .nav-pills .nav-link {
+      width: 100%;
+      padding: 0.6em 0;
+      text-align: left;
+      font-size: 1.1em;
+      background-color: #06899e;
+      background-color: white;
+      font-family: 'Josefin Sans', 'Nunito', sans-serif;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px; }
+      #courses .nav-pills .nav-link.active {
+        background: #06899e !important; }
+      #courses .nav-pills .nav-link img {
+        max-height: 1.7em;
+        vertical-align: sub;
+        margin: 0 1em 0 1em; }
+      #courses .nav-pills .nav-link.active img {
+        background: white;
+        border-radius: 0.4em; }
+  #courses .col-md-9 {
+    padding: 0 0 0 1.5em; }
+    @media only screen and (max-width: 576px) {
+      #courses .col-md-9 {
+        padding: 0;
+        margin-top: 2em; } }
+    #courses .col-md-9 > .tab-content {
+      height: 100%;
+      background: white;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px; }
+      #courses .col-md-9 > .tab-content .tab-pane .tab-content {
+        padding: 1em 1.5em;
+        background: white;
+        height: 100%;
+        overflow: auto; }
+        #courses .col-md-9 > .tab-content .tab-pane .tab-content .heading-tertiary {
+          margin: 0.5em 0 0.8em; }
+        #courses .col-md-9 > .tab-content .tab-pane .tab-content table {
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+          --bs-table-striped-bg: #32cee745;
+          font-family: 'Josefin Sans'; }
+          #courses .col-md-9 > .tab-content .tab-pane .tab-content table th, #courses .col-md-9 > .tab-content .tab-pane .tab-content table td {
+            padding: 12px 12px 12px 2em !important;
+            white-space: nowrap; }
+          #courses .col-md-9 > .tab-content .tab-pane .tab-content table td:first-child {
+            font-weight: 600;
+            padding-left: 12px !important; }
+          #courses .col-md-9 > .tab-content .tab-pane .tab-content table td:last-child {
+            white-space: normal; }
+      #courses .col-md-9 > .tab-content .nav-tabs {
+        border: none;
+        gap: 1em;
+        background: aliceblue;
+        padding-bottom: 1em; }
+        @media only screen and (max-width: 576px) {
+          #courses .col-md-9 > .tab-content .nav-tabs {
+            justify-content: space-between; } }
+        #courses .col-md-9 > .tab-content .nav-tabs .nav-link {
+          padding: 0.8em 0 0.8em 0;
+          width: 16rem;
+          border: none;
+          font-family: 'Josefin Sans', 'Nunito', sans-serif;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px;
+          background-color: white; }
+          #courses .col-md-9 > .tab-content .nav-tabs .nav-link.active {
+            background: #06899e !important;
+            color: white; }
+
 .logo {
   max-height: 7rem; }
 
