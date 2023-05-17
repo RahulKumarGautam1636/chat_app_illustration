@@ -1,6 +1,7 @@
 #courses {
 
     font-size: 1.6rem;
+    padding: 14rem 0 6rem;
 
     & .container > .row {
         background: aliceblue;
@@ -61,7 +62,19 @@
                 overflow: auto;
 
                 & .heading-tertiary {
-                    margin: 0.5em 0 0.8em;
+                    // margin: 0.5em 0 0.8em;
+                    margin: 1em 0 0.5em;
+                }
+
+                & .details-list {
+
+                    @media only screen and (max-width: 576px) {
+                        padding-left: 0;
+                    }
+                }
+
+                & .features-list {
+                    font-family: "Josefin Sans";
                 }
 
                 & table {
@@ -69,6 +82,7 @@
                     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
                     --bs-table-striped-bg: #32cee745;
                     font-family: 'Josefin Sans';
+                    min-width: 70rem;
 
                     & th, & td {
                         padding: 12px 12px 12px 2em !important;
@@ -94,9 +108,9 @@
                 background: aliceblue;
                 padding-bottom: 1em;
 
-                @media only screen and (max-width: 576px) {
-                    justify-content: space-between;
-                }
+                // @media only screen and (max-width: 576px) {
+                //     justify-content: space-between;
+                // }
     
                 & .nav-link {
                     padding: 0.8em 0 0.8em 0;

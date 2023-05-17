@@ -302,7 +302,8 @@ header {
     #recomended-courses .job-course-card .button-primary {
       width: 100%;
       border-radius: 0;
-      padding: 1.1rem 0 0.8rem; }
+      padding: 1.1rem 0 0.8rem;
+      text-align: center; }
       @media only screen and (max-width: 991px) {
         #recomended-courses .job-course-card .button-primary {
           padding: 0.6rem 0 0.2rem;
@@ -563,7 +564,8 @@ header {
     background: #a667ea; }
 
 #courses {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  padding: 14rem 0 6rem; }
   #courses .container > .row {
     background: aliceblue;
     padding: 1.5em;
@@ -605,11 +607,17 @@ header {
         height: 100%;
         overflow: auto; }
         #courses .col-md-9 > .tab-content .tab-pane .tab-content .heading-tertiary {
-          margin: 0.5em 0 0.8em; }
+          margin: 1em 0 0.5em; }
+        @media only screen and (max-width: 576px) {
+          #courses .col-md-9 > .tab-content .tab-pane .tab-content .details-list {
+            padding-left: 0; } }
+        #courses .col-md-9 > .tab-content .tab-pane .tab-content .features-list {
+          font-family: "Josefin Sans"; }
         #courses .col-md-9 > .tab-content .tab-pane .tab-content table {
           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
           --bs-table-striped-bg: #32cee745;
-          font-family: 'Josefin Sans'; }
+          font-family: 'Josefin Sans';
+          min-width: 70rem; }
           #courses .col-md-9 > .tab-content .tab-pane .tab-content table th, #courses .col-md-9 > .tab-content .tab-pane .tab-content table td {
             padding: 12px 12px 12px 2em !important;
             white-space: nowrap; }
@@ -623,9 +631,6 @@ header {
         gap: 1em;
         background: aliceblue;
         padding-bottom: 1em; }
-        @media only screen and (max-width: 576px) {
-          #courses .col-md-9 > .tab-content .nav-tabs {
-            justify-content: space-between; } }
         #courses .col-md-9 > .tab-content .nav-tabs .nav-link {
           padding: 0.8em 0 0.8em 0;
           width: 16rem;
@@ -839,3 +844,6 @@ html {
   @media only screen and (max-width: 50em) {
     html {
       font-size: 50.5%; } }
+
+a {
+  text-decoration: none; }

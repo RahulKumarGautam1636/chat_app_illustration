@@ -10,7 +10,7 @@ import Header from './Header';
 import Courses from './courses';
 // import Footer from './footer';
 // import ScrollToTop from '../ScrollToTop.js';
-// import { ConnectedToast } from './utilities';
+import { ConnectedIsMobile } from './utils/utilities';
 
 
 function App({ isLoading }) {
@@ -50,6 +50,7 @@ useEffect(() => {
         {/* <Footer/> */}
         {/* <ConnectedToast/> */}
       </HashRouter>
+      <ConnectedIsMobile/>
     </div>
   );
 }
