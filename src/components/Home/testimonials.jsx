@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { TestimonialCard } from "../utils/cards";
 
 const Testimonials = () => {
+
+    useEffect(() => {
+        window.renderCarousel();
+    },[])
 
     const testimonialsItems = [
         { name: 'Abhijit Ghosh', img: 'person1.jpg', comment: 'I am thankful to Versicle Institute of Technology for give me huge educational support & today I am a employee in GUNIESS GROUP, Sec V, Saltlake, Kolkata.'},

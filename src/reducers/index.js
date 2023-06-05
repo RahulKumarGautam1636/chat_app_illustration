@@ -7,22 +7,22 @@ const IsMobileReducer = (isMobile=false, action) => {                  // Holds 
       return action.value;
     }
     return isMobile;
-  }
+}
   
+const modals = { LOGIN_MODAL: false };
 
-
-
-
-
-
-
-
-
+const modalReducer = (state=modals, action) => {    
+  if (action.type === 'MODAL') {
+    return {...state, [action.payload.name]: action.payload.status};
+  }    
+  return state;  
+}
 
 
 
 
 
 export default combineReducers({
-    isMobile: IsMobileReducer
+    isMobile: IsMobileReducer,
+    modals: modalReducer
 })

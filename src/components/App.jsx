@@ -3,14 +3,18 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import AOS from 'aos';
 import './css/style.css';
 import "aos/dist/aos.css";
+// import { useLocation } from 'react-router-dom';
 // import { connect } from 'react-redux';
 
 import Home from './Home';
 import Header from './Header';
-import Courses from './courses';
 // import Footer from './footer';
-// import ScrollToTop from '../ScrollToTop.js';
-import { ConnectedIsMobile } from './utils/utilities';
+// import ScrollToTop from '../scrollToTop';
+import { ConnectedIsMobile, NotFound } from './utils/utilities';
+import Modals from './modals';
+import SoftwareDevelopment from './courses/softwareDevelopment';
+import TallyPrime from './courses/tallyPrime';
+import WebDesign from './courses/webDesign';
 
 
 function App({ isLoading }) {
@@ -28,29 +32,21 @@ useEffect(() => {
   AOS.refresh();
 }, []);
 
+
   return (
     <div>
       <HashRouter>
-        {/* {isLoading && <div className='spinner-container'><GlobalLoader/></div>} */}
         <Header/>
-        {/* <BottomNav/> */}
-        {/* <ScrollToTop/> */}
         <Routes>
           <Route path='/' exact element={<Home/>}/>
-          <Route path='/courses' element={<Courses/>}/>
-          {/* <Route path='/productPage/:id' component={ProductPage}/>
-          <Route path='/aboutUs' component={AboutUs}/>
-          <Route path='/contactUs' component={ContactUs}/>
-          <Route path='/filterPage/:filterTerm' component={FilterPage}/>
-          <Route path='/cartPage' component={CartPage}/>
-          <Route path='/checkout' component={Checkout}/>
-          <Route path='/wishlist' component={Wishlist}/>
-          <Route path='/patientProfile' component={PatientProfile}/> */}
+          <Route path='/softwareDevelopment' element={<SoftwareDevelopment/>}/>
+          <Route path='/tallyPrime' element={<TallyPrime/>}/>
+          <Route path='/webDesign' element={<WebDesign/>}/>
+          <Route path='/*' element={<NotFound/>}/>
         </Routes>
-        {/* <Footer/> */}
-        {/* <ConnectedToast/> */}
+        <Modals/>
+        <ConnectedIsMobile/>                                          {/* Always wrap component with Link / HashLink otherwise will throw errors. */}
       </HashRouter>
-      <ConnectedIsMobile/>
     </div>
   );
 }
@@ -62,3 +58,9 @@ useEffect(() => {
 // export default connect(mapStateToProps, {})(App);
 
 export default App;
+
+
+
+
+
+

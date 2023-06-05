@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 
 const CourseCard = ({ course, index }) => {
@@ -39,14 +40,14 @@ export const JobCourseCard = ({ course, index }) => {
                 </div>
             </div>
 
-            <Link className="button-primary text-white" style={{background: color}} to={course.to}>
+            <HashLink className="button-primary text-white" style={{background: color}} to={course.to + '/#top'}>         {/* Hashlink will also scroll to element having id of 'courses' */}
                 {/* ₹ */}
                  {pricing}
                 <svg className="me-3" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="15.5" cy="15.5" r="15.5" fill="#ff7ba6"/>
                     <path d="M11.0171 9.55266C11.0127 8.78287 11.8432 8.29696 12.5121 8.67801L22.892 14.5914C23.5608 14.9724 23.5664 15.9347 22.902 16.3234L12.5909 22.356C11.9264 22.7447 11.0904 22.2684 11.0859 21.4986L11.0171 9.55266Z" fill="white"/>
                 </svg>
-            </Link>
+            </HashLink>
         </div>
     )
 }

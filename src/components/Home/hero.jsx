@@ -1,4 +1,8 @@
 const Hero = () => {
+
+    // const navigate = useNavigate();                                  // Use this for programmatical navigation in react-router-dom v6.0
+    // navigate('/courses')
+
     return (
         <section id="hero">
             <div className="container">

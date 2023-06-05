@@ -1,44 +1,46 @@
 import Table from 'react-bootstrap/Table';
 import { HashLink } from 'react-router-hash-link'; 
-import { connect } from 'react-redux'; 
-import { Link } from 'react-router-dom'; 
+import { connect } from 'react-redux';  
+import { useNavigate } from 'react-router-dom';
 
-const Courses = ({ isMobile }) => {
+const SoftwareDevelopment = ({ isMobile }) => {
+
+    const navigate = useNavigate();
+
     return (
-        <section id="courses">
+        <section id="softwareDevelopment">
             <div className="container">
                 <div className="reviews__heading mb-5">
                     <h2 className="heading-secondary"> Professional Training.</h2>
-                    <Link className='d-none d-lg-block' to='/'><button className="btn-1">Back to Home</button></Link>
-                    {/* <HashLink to='#tabVertical-pane-java-1'>Scroll</HashLink> */}
+                    <button className="btn-1 d-none d-lg-block" onClick={() => navigate(-1)}>Back to Home</button>
                 </div>
                 <div className="row">
                     <div className="col col-12 col-md-3">
                         <div className="row">
                             <ul className="nav flex-column nav-pills p-0" role="tablist">
                                 <li className="nav-item" role="presentation">
-                                    <HashLink to={isMobile ? '#all-tabs' : '#courses'}><button type="button" id="tabVertical-java-1" className="nav-link active" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-java-1" role="tab" aria-controls="tabVertical-pane-java-1" aria-selected="true"><img src="assets/icons/226777.png" alt="java"/> Java</button></HashLink>
+                                    <HashLink to={isMobile ? '#all-tabs' : '#top'}><button type="button" id="tabVertical-java-1" className="nav-link active" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-java-1" role="tab" aria-controls="tabVertical-pane-java-1" aria-selected="true"><img src="assets/icons/226777.png" alt="java"/> Java</button></HashLink>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <HashLink to={isMobile ? '#all-tabs' : '#courses'}><button type="button" id="tabVertical-dotNet-8" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-dotNet-8" role="tab" aria-controls="tabVertical-pane-dotNet-8" aria-selected="false"><img src="assets/icons/aspnet.png" alt="dotNet"/> Dot .Net</button></HashLink>
+                                    <HashLink to={isMobile ? '#all-tabs' : '#top'}><button type="button" id="tabVertical-dotNet-8" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-dotNet-8" role="tab" aria-controls="tabVertical-pane-dotNet-8" aria-selected="false"><img src="assets/icons/aspnet.png" alt="dotNet"/> Dot .Net</button></HashLink>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <HashLink to={isMobile ? '#all-tabs' : '#courses'}><button type="button"  id="tabVertical-php-2" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-php-2" role="tab" aria-controls="tabVertical-pane-php-2" aria-selected="false"><img src="assets/icons/php.png" alt="php"/>PHP</button></HashLink>
+                                    <HashLink to={isMobile ? '#all-tabs' : '#top'}><button type="button"  id="tabVertical-php-2" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-php-2" role="tab" aria-controls="tabVertical-pane-php-2" aria-selected="false"><img src="assets/icons/php.png" alt="php"/>PHP</button></HashLink>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <HashLink to={isMobile ? '#all-tabs' : '#courses'}><button type="button" id="tabVertical-oracle-3" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-oracle-3" role="tab" aria-controls="tabVertical-pane-oracle-3" aria-selected="false"><img src="assets/icons/oracle.png" alt="oracle"/> Oracle</button></HashLink>
+                                    <HashLink to={isMobile ? '#all-tabs' : '#top'}><button type="button" id="tabVertical-oracle-3" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-oracle-3" role="tab" aria-controls="tabVertical-pane-oracle-3" aria-selected="false"><img src="assets/icons/oracle.png" alt="oracle"/> Oracle</button></HashLink>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <HashLink to={isMobile ? '#all-tabs' : '#courses'}><button type="button" id="tabVertical-sqlServer-4" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-sqlServer-4" role="tab" aria-controls="tabVertical-pane-sqlServer-4" aria-selected="false"><img src="assets/icons/sql.png" alt="sql"/> SQL Server</button></HashLink>
+                                    <HashLink to={isMobile ? '#all-tabs' : '#top'}><button type="button" id="tabVertical-sqlServer-4" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-sqlServer-4" role="tab" aria-controls="tabVertical-pane-sqlServer-4" aria-selected="false"><img src="assets/icons/sql.png" alt="sql"/> SQL Server</button></HashLink>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <HashLink to={isMobile ? '#all-tabs' : '#courses'}><button type="button" id="tabVertical-mySql-5" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-mySql-5" role="tab" aria-controls="tabVertical-pane-mySql-5" aria-selected="false"><img src="assets/icons/mySql.png" alt="mySql"/> My SQL</button></HashLink>
+                                    <HashLink to={isMobile ? '#all-tabs' : '#top'}><button type="button" id="tabVertical-mySql-5" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-mySql-5" role="tab" aria-controls="tabVertical-pane-mySql-5" aria-selected="false"><img src="assets/icons/mySql.png" alt="mySql"/> My SQL</button></HashLink>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <HashLink to={isMobile ? '#all-tabs' : '#courses'}><button type="button" id="tabVertical-cProg-6" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-cProg-6" role="tab" aria-controls="tabVertical-pane-cProg-6" aria-selected="false"><img src="assets/icons/c-prog.png" alt="prog"/> C Programming</button></HashLink>
+                                    <HashLink to={isMobile ? '#all-tabs' : '#top'}><button type="button" id="tabVertical-cProg-6" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-cProg-6" role="tab" aria-controls="tabVertical-pane-cProg-6" aria-selected="false"><img src="assets/icons/c-prog.png" alt="prog"/> C Programming</button></HashLink>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <HashLink to={isMobile ? '#all-tabs' : '#courses'}><button type="button" id="tabVertical-cPlus-7" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-cPlus-7" role="tab" aria-controls="tabVertical-pane-cPlus-7" aria-selected="false"><img src="assets/icons/cPlus.png" alt="cPlus"/> C++ Programming</button></HashLink>
+                                    <HashLink to={isMobile ? '#all-tabs' : '#top'}><button type="button" id="tabVertical-cPlus-7" className="nav-link" data-bs-toggle="tab" data-bs-target="#tabVertical-pane-cPlus-7" role="tab" aria-controls="tabVertical-pane-cPlus-7" aria-selected="false"><img src="assets/icons/cPlus.png" alt="cPlus"/> C++ Programming</button></HashLink>
                                 </li>
                             </ul>
                         </div>
@@ -1123,14 +1125,14 @@ const Courses = ({ isMobile }) => {
                             </div>
                         </div>
                     </div>
-                    <Link className='d-lg-none mt-5 ms-auto w-auto' to='/'><button className="btn-1">Back to Home</button></Link>
+                    <button className="btn-1 d-lg-none mt-5 ms-auto w-auto" onClick={() => navigate(-1)}>Back to Home</button>
                 </div>
             </div>
         </section>
     )
 }
 
-const mapStateToCourses = (state) => {
+const mapStateToSoftwareDevelopment = (state) => {
     return { isMobile: state.isMobile };
 }
-export default connect(mapStateToCourses, {})(Courses);
+export default connect(mapStateToSoftwareDevelopment, {})(SoftwareDevelopment);

@@ -6,9 +6,11 @@
 
 @import "pages/header";
 @import "pages/home";
-@import "pages/courses";
+@import "pages/softwareDevelopment";
 @import "components/components";
 @import "components/typegraphy";
 @import "pages/sidePanel";
 @import "abstracts/base";
+
+// @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";               // import precompiled bootstrap scss. when using this comment out bootstrap.min.css import in root index.js file.
 

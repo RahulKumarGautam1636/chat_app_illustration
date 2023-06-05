@@ -1,4 +1,4 @@
-#courses {
+#softwareDevelopment {
 
     font-size: 1.6rem;
     padding: 14rem 0 6rem;
@@ -15,14 +15,25 @@
         gap: 1em;
 
         & .nav-link {
+            // width: 100%;
+            // padding: 0.6em 0;
+            // text-align: left;
+            // font-size: 1.1em;
+            // background-color: #06899e;
+            // background-color: white;
+            // font-family: 'Josefin Sans', 'Nunito', sans-serif;
+            // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px;
             width: 100%;
-            padding: 0.6em 0;
+            padding: 0.6em 0 0.5em;
             text-align: left;
             font-size: 1.1em;
             background-color: #06899e;
             background-color: white;
             font-family: 'Josefin Sans', 'Nunito', sans-serif;
             box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px;
+            display: flex;
+            align-items: center;
+            line-height: 33px;
 
             &.active {
                 background: #06899e !important;

@@ -70,7 +70,7 @@ header {
       transform: scaleX(1); }
   header .header-btn {
     position: relative;
-    font-size: 1.8rem;
+    font-size: clamp(1rem, 3.5vw, 1.8rem);
     padding: 0.5rem 2rem;
     color: var(--text-color-3);
     border-radius: 50px;
@@ -96,6 +96,14 @@ header {
       inset: 0;
       background: var(--color-3);
       opacity: 0.2; }
+  header .menu-icon line {
+    transition: 0.2s linear; }
+  header .menu-icon.active #middle-line {
+    opacity: 0; }
+  header .menu-icon.active #top-line {
+    transform: rotateZ(-135deg) translate(-28px); }
+  header .menu-icon.active #bottom-line {
+    transform: rotateZ(-45deg) translate(-11px, -2px); }
 
 #hero {
   max-width: 100vw;
@@ -563,82 +571,85 @@ header {
     color: white;
     background: #a667ea; }
 
-#courses {
+#softwareDevelopment {
   font-size: 1.6rem;
   padding: 14rem 0 6rem; }
-  #courses .container > .row {
+  #softwareDevelopment .container > .row {
     background: aliceblue;
     padding: 1.5em;
     min-height: 70vh;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; }
-  #courses .nav-pills {
+  #softwareDevelopment .nav-pills {
     gap: 1em; }
-    #courses .nav-pills .nav-link {
+    #softwareDevelopment .nav-pills .nav-link {
       width: 100%;
-      padding: 0.6em 0;
+      padding: 0.6em 0 0.5em;
       text-align: left;
       font-size: 1.1em;
       background-color: #06899e;
       background-color: white;
       font-family: 'Josefin Sans', 'Nunito', sans-serif;
-      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px; }
-      #courses .nav-pills .nav-link.active {
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px;
+      display: flex;
+      align-items: center;
+      line-height: 33px; }
+      #softwareDevelopment .nav-pills .nav-link.active {
         background: #06899e !important; }
-      #courses .nav-pills .nav-link img {
+      #softwareDevelopment .nav-pills .nav-link img {
         max-height: 1.7em;
         vertical-align: sub;
         margin: 0 1em 0 1em; }
-      #courses .nav-pills .nav-link.active img {
+      #softwareDevelopment .nav-pills .nav-link.active img {
         background: white;
         border-radius: 0.4em; }
-  #courses .col-md-9 {
+  #softwareDevelopment .col-md-9 {
     padding: 0 0 0 1.5em; }
     @media only screen and (max-width: 576px) {
-      #courses .col-md-9 {
+      #softwareDevelopment .col-md-9 {
         padding: 0;
         margin-top: 2em; } }
-    #courses .col-md-9 > .tab-content {
+    #softwareDevelopment .col-md-9 > .tab-content {
       height: 100%;
       background: white;
       box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px; }
-      #courses .col-md-9 > .tab-content .tab-pane .tab-content {
+      #softwareDevelopment .col-md-9 > .tab-content .tab-pane .tab-content {
         padding: 1em 1.5em;
         background: white;
         height: 100%;
         overflow: auto; }
-        #courses .col-md-9 > .tab-content .tab-pane .tab-content .heading-tertiary {
+        #softwareDevelopment .col-md-9 > .tab-content .tab-pane .tab-content .heading-tertiary {
           margin: 1em 0 0.5em; }
         @media only screen and (max-width: 576px) {
-          #courses .col-md-9 > .tab-content .tab-pane .tab-content .details-list {
+          #softwareDevelopment .col-md-9 > .tab-content .tab-pane .tab-content .details-list {
             padding-left: 0; } }
-        #courses .col-md-9 > .tab-content .tab-pane .tab-content .features-list {
+        #softwareDevelopment .col-md-9 > .tab-content .tab-pane .tab-content .features-list {
           font-family: "Josefin Sans"; }
-        #courses .col-md-9 > .tab-content .tab-pane .tab-content table {
+        #softwareDevelopment .col-md-9 > .tab-content .tab-pane .tab-content table {
           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
           --bs-table-striped-bg: #32cee745;
           font-family: 'Josefin Sans';
           min-width: 70rem; }
-          #courses .col-md-9 > .tab-content .tab-pane .tab-content table th, #courses .col-md-9 > .tab-content .tab-pane .tab-content table td {
+          #softwareDevelopment .col-md-9 > .tab-content .tab-pane .tab-content table th, #softwareDevelopment .col-md-9 > .tab-content .tab-pane .tab-content table td {
             padding: 12px 12px 12px 2em !important;
             white-space: nowrap; }
-          #courses .col-md-9 > .tab-content .tab-pane .tab-content table td:first-child {
+          #softwareDevelopment .col-md-9 > .tab-content .tab-pane .tab-content table td:first-child {
             font-weight: 600;
             padding-left: 12px !important; }
-          #courses .col-md-9 > .tab-content .tab-pane .tab-content table td:last-child {
+          #softwareDevelopment .col-md-9 > .tab-content .tab-pane .tab-content table td:last-child {
             white-space: normal; }
-      #courses .col-md-9 > .tab-content .nav-tabs {
+      #softwareDevelopment .col-md-9 > .tab-content .nav-tabs {
         border: none;
         gap: 1em;
         background: aliceblue;
         padding-bottom: 1em; }
-        #courses .col-md-9 > .tab-content .nav-tabs .nav-link {
+        #softwareDevelopment .col-md-9 > .tab-content .nav-tabs .nav-link {
           padding: 0.8em 0 0.8em 0;
           width: 16rem;
           border: none;
           font-family: 'Josefin Sans', 'Nunito', sans-serif;
           box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px;
           background-color: white; }
-          #courses .col-md-9 > .tab-content .nav-tabs .nav-link.active {
+          #softwareDevelopment .col-md-9 > .tab-content .nav-tabs .nav-link.active {
             background: #06899e !important;
             color: white; }
 
@@ -750,6 +761,26 @@ header {
 .section-padding {
   padding: 12rem 0; }
 
+.not-found {
+  background: #fafbff;
+  display: grid;
+  padding-bottom: 4rem;
+  place-items: center;
+  text-align: center;
+  padding-top: 12rem; }
+  .not-found img {
+    max-width: 73rem;
+    width: 100%; }
+  .not-found h3 {
+    color: #0363cd;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -.025em;
+    line-height: 24px;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+    font-family: 'Josefin Sans'; }
+
 .heading-primary {
   font-size: clamp(40px, 7vw, 85px);
   color: var(--text-color-4);
@@ -781,13 +812,12 @@ header {
   height: 100%; }
   .sidePanel .top-section {
     height: 30%;
-    background: linear-gradient(45deg, rgba(110, 235, 187, 0.9) 0%, rgba(73, 230, 255, 0.9) 100%);
+    background: linear-gradient(142deg, #c6ffce 0%, #afcdfe 100%);
     background-size: 111%;
     display: flex;
     justify-content: center;
     align-items: center; }
   .sidePanel .bottom-section {
-    height: -webkit-fill-available;
     padding: 3rem 1rem;
     border-top-left-radius: 4rem;
     border-top-right-radius: 4rem;
@@ -801,7 +831,7 @@ header {
       margin-top: 3rem;
       padding: 0; }
       .sidePanel .bottom-section ul li {
-        padding: 2.2rem 2.5rem;
+        padding: 1.5rem 2.5rem;
         width: 80%;
         background: white;
         font-size: 1.9rem;

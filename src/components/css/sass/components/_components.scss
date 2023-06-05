@@ -249,3 +249,29 @@
 .section-padding {
     padding: 12rem 0;
 }
+
+.not-found {
+    background: #fafbff;
+    display: grid;
+    padding-bottom: 4rem;
+    place-items: center;
+    text-align: center;
+    padding-top: 12rem;
+
+    & img {
+        max-width: 73rem;
+        width: 100%;
+    }
+
+    & h3 {
+        color: #0363cd;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -.025em;
+        line-height: 24px;
+        margin: 0 0 10px;
+        text-transform: capitalize;
+        font-family: 'Josefin Sans';
+    }
+}
+
