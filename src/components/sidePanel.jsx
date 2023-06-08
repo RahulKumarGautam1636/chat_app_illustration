@@ -1,20 +1,20 @@
 // import { Link } from 'react-router-dom';
 // import { connect } from 'react-redux';
 
-export const sidePanel = ({ handleClose }) => {      
+export const SidePanel = ({ handleClose }) => {      
     
     const customScroll = (id) => {                                 // Somehow bootstrap components (modal/offcanvas) are blocking the scrolling function of Hashlinks.
         var element = document.getElementById(id);                 // Hence implementing custom scroll function to scroll between sections.
         element.scrollIntoView();
-        handleClose(false);
+        handleClose('SIDE_MENU', false);
     }
 
     return (                                                                            
         <div className='sidePanel'>
             <div className='top-section'>
-                <img style={{maxHeight: '9rem'}} src="assets/img/versicle-logo.png" alt="toggle_mode" onClick={() => handleClose(false)}/>
+                <i className='bx bx-chevrons-left modal-close-btn' onClick={() => handleClose('SIDE_MENU', false)}></i>
+                <img style={{maxHeight: '9rem'}} src="assets/img/versicle-logo.png" alt="toggle_mode"/>
             </div>
-
             <div className='bottom-section'>
                 <ul>
                     {/* {path.map((item, index) => {

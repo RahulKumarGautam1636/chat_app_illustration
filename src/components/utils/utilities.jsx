@@ -47,9 +47,7 @@ const IsMobile = ({ isMobileAction }) => {                                      
   // export default withRouter(ScrollToTop);
 
   export const NotFound = () => {
-
     const navigate = useNavigate();
-
     return (
       <div className='not-found'>
         <img src="assets/img/err-404.jpg" alt="not found"/>
@@ -59,14 +57,14 @@ const IsMobile = ({ isMobileAction }) => {                                      
     )
   }
 
-  export const OffcanvasComponent = ({ isActive, child, handleClose }) => {
+  export const OffcanvasComponent = ({ isActive, child, placement='start', className=''}) => {
 
     return (
-      <Offcanvas show={isActive} onHide={() => handleClose(false)}>
+      <Offcanvas show={isActive} placement={placement} className={className}>                                                           {/* We'll handle open/closing from redux state hence don't need onhide here. */}
         {/* <Offcanvas.Header closeButton><Offcanvas.Title>Offcanvas</Offcanvas.Title></Offcanvas.Header> */}
         <Offcanvas.Body>
           {child}
-          <i className="icofont-close-circled close-btn text-dark" onClick={() => handleClose(false)}></i>
+          {/* <i className="bx bx-x-circle close-custom-modal" onClick={() => handleClose(false)}></i> */}        {/* We'll add closing button on the Child component hence don't need this. */}
         </Offcanvas.Body>
       </Offcanvas>
     );

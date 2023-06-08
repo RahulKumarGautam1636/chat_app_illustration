@@ -1,14 +1,66 @@
 // import { HashLink } from "react-router-hash-link";
 // import { connect } from "react-redux";
 
-const LoginModal = ({ handleModal }) => {
+import { useState } from "react";
 
-    console.log(handleModal);
-    
+const LoginModal = ({ handleClose }) => {
+
+    const [tabActive, setTabActive] = useState('login');
+    const [otp, setOTP] = useState({isOpen: false, recievedValue: 'null', enteredValue: '', sent: false, verified: false, read_only: false});
+
+
     return (
-        <h1 onClick={() => handleModal('LOGIN_MODAL', false)}>
-            LOGIN MODAL
-        </h1>
+        <section className="login h-100">
+            <div className="container">
+                <div className="login-modal__page">
+                    <i className='bx bx-chevrons-left modal-close-btn' onClick={() => handleClose('LOGIN_MODAL', false)}></i>
+                    <div className="login-modal__page__left"></div>
+                    <div className="login-modal__page__right">
+                        <h1 className="heading-secondary">Hello There!</h1>
+                        <p>We're glad having you on VIT Educare</p>
+                        <div className="form-wrapper">
+                            <div className="tab-content">
+                                <div className={`tab-pane fade ${tabActive === 'login' && 'show active'}`} role="tabpanel" aria-labelledby="tabFade-1">
+                                    <form>
+                                        <div className="input__group">
+                                            <input type="text" placeholder="User name" id='user-name' required/>
+                                        </div>
+                                        <div className="input__group">
+                                            <input type="password" placeholder="Password" id="password" required/>
+                                        </div>
+                                        <p>Forgot your password ?</p>
+                                        <button className="btn-1">Login</button>
+                                    </form>
+                                    <div className="login-bottom">
+                                        <p>Not a member ?</p>
+                                        <button className="btn-1" onClick={() => setTabActive('register')}>Register Now</button>
+                                    </div>
+                                </div>
+                                <div className={`tab-pane fade ${tabActive === 'register' && 'show active'}`} role="tabpanel" aria-labelledby="tabFade-2">
+                                    <form>
+                                        <div className="input__group">
+                                            <input type="text" placeholder="Phone number" required/>
+                                        </div>
+                                        <div className="input__group">
+                                            <input type="password" placeholder="Password" required/>
+                                        </div>
+                                        {otp.isOpen && <div className="input__group">
+                                            <input type="text" placeholder="Enter OTP" required/>
+                                        </div>}
+                                        {!otp.isOpen && <p>You'll receive an OTP</p>}
+                                        <button className="btn-1" onClick={() => setOTP({...otp, isOpen: true})}>Submit</button>
+                                    </form>
+                                    <div className="login-bottom">
+                                        <p>Already a member ?</p>
+                                        <button className="btn-1" onClick={() => setTabActive('login')}>Login</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     )
 }
 

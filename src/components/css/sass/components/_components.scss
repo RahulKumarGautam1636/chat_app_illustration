@@ -275,3 +275,22 @@
     }
 }
 
+.modal-close-btn {
+    font-size: 3.5rem;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    color: #0f8086;
+    // transform: rotate(180deg);
+    padding: 3px 2px 2px 2px;
+    border-radius: 50%;
+    background: #f7f7f7;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 3px 0px;
+    color: gray;
+    cursor: pointer;
+}
+
+.tab-pane.active.show {
+    -webkit-animation: slideIn .2s ease-out;
+    animation: slideIn .2s ease-out
+}

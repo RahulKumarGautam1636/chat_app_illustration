@@ -9,7 +9,7 @@ const IsMobileReducer = (isMobile=false, action) => {                  // Holds 
     return isMobile;
 }
   
-const modals = { LOGIN_MODAL: false };
+const modals = { LOGIN_MODAL: false, SIDE_MENU: false };               // using the term modal for both modals and offcanvas.
 
 const modalReducer = (state=modals, action) => {    
   if (action.type === 'MODAL') {

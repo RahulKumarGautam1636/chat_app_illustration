@@ -84,6 +84,8 @@ header {
 
     & .menu-icon {
 
+        cursor: pointer;
+
         & line {
             transition: 0.2s linear;
         }
