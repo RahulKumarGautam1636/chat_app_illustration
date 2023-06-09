@@ -7,8 +7,26 @@ const LoginModal = ({ handleClose }) => {
 
     const [tabActive, setTabActive] = useState('login');
     const [otp, setOTP] = useState({isOpen: false, recievedValue: 'null', enteredValue: '', sent: false, verified: false, read_only: false});
+    const [loginData, setLoginData] = useState({ phone: '', password: ''});
 
+    const handleLoginForm = (e) => {
+        const { name, value } = e.target;
+        setLoginData({ ...loginData, [name]: value });
+    }
 
+    const handleLoginSubmit = (e) => {
+        e.preventDefault();
+        debugger;
+        console.log(loginData.phone.length);
+        if (loginData.phone.length < 10 || loginData.password.length < 4) {
+            alert('Enter valid phone number and a password of at least 4 characters.');
+            return;
+        }
+        alert('form submitted successfully');
+        setLoginData({phone: '', password: ''});
+    }
+
+    console.log(loginData);
     return (
         <section className="login h-100">
             <div className="container">
@@ -21,15 +39,15 @@ const LoginModal = ({ handleClose }) => {
                         <div className="form-wrapper">
                             <div className="tab-content">
                                 <div className={`tab-pane fade ${tabActive === 'login' && 'show active'}`} role="tabpanel" aria-labelledby="tabFade-1">
-                                    <form>
+                                    <form onSubmit={handleLoginSubmit}>
                                         <div className="input__group">
-                                            <input type="text" placeholder="User name" id='user-name' required/>
+                                            <input onChange={handleLoginForm} value={loginData.phone} type="text" placeholder="Phone number" name='phone' id='phone' required/>
                                         </div>
                                         <div className="input__group">
-                                            <input type="password" placeholder="Password" id="password" required/>
+                                            <input onChange={handleLoginForm} value={loginData.password} type="password" placeholder="Password" name='password' id="password" required/>
                                         </div>
                                         <p>Forgot your password ?</p>
-                                        <button className="btn-1">Login</button>
+                                        <button type="submit" className="btn-1">Login</button>
                                     </form>
                                     <div className="login-bottom">
                                         <p>Not a member ?</p>
@@ -39,10 +57,10 @@ const LoginModal = ({ handleClose }) => {
                                 <div className={`tab-pane fade ${tabActive === 'register' && 'show active'}`} role="tabpanel" aria-labelledby="tabFade-2">
                                     <form>
                                         <div className="input__group">
-                                            <input type="text" placeholder="Phone number" required/>
+                                            <input type="text" placeholder="Phone number" name="phone" required/>
                                         </div>
                                         <div className="input__group">
-                                            <input type="password" placeholder="Password" required/>
+                                            <input type="password" placeholder="Password" name="password" required/>
                                         </div>
                                         {otp.isOpen && <div className="input__group">
                                             <input type="text" placeholder="Enter OTP" required/>

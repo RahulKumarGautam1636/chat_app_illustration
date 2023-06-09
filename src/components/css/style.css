@@ -894,10 +894,17 @@ header {
   background-color: #e9ecff !important;
   border: none; }
 
+@media only screen and (max-width: 994px) {
+  .login-modal .offcanvas-body {
+    padding: 0; } }
+
 .login-modal .container {
   height: 100%;
   display: grid;
   place-items: center; }
+  @media only screen and (max-width: 994px) {
+    .login-modal .container {
+      padding: 0; } }
 
 .login-modal__page {
   display: flex;
@@ -959,7 +966,7 @@ header {
       font-size: 1.45rem; }
     .login-modal__page__right .form-wrapper {
       width: 100%;
-      max-width: 32rem; }
+      max-width: 36rem; }
     .login-modal__page__right form {
       width: 100%; }
       .login-modal__page__right form input {

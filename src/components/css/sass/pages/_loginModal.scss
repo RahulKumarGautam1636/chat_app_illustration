@@ -6,10 +6,21 @@
         border: none;
     }
 
+    & .offcanvas-body {
+
+        @media only screen and (max-width: 994px) {
+            padding: 0
+        }
+    }
+
     & .container {
         height: 100%;
         display: grid;
         place-items: center;
+
+        @media only screen and (max-width: 994px) {
+            padding: 0
+        }
     }
 
     &__page {
@@ -94,7 +105,7 @@
 
             & .form-wrapper {
                 width: 100%;
-                max-width: 32rem;
+                max-width: 36rem;
             }
 
             & form {
